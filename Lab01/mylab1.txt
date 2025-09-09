@@ -1,0 +1,411 @@
+    1  sudo apt install python3
+    2  vim
+    3  sudo apt install vim
+    4  vim
+    5  la
+    6  ls -
+    7  ls -a
+    8  vim .viminfo 
+    9  vim
+   10  python3 -m venv venv
+   11  sudo apt install python3.12-venv
+   12  python3 -m venv myenv
+   13  vim
+   14  cd ~
+   15  vim .vimrc
+   16  ls
+   17  mkdir -p ~/.vim ~/.vim/autoload ~/.vim/backup ~/.vim/colors ~/.vim/plugged
+   18  ls
+   19  cd vim
+   20  cd .vim
+   21  ls
+   22  cd ~
+   23  touch ~/.vimrc
+   24  ls
+   25  vim .vimrc
+   26  vim vimrc
+   27  vim .vimrc
+   28  ls
+   29  vd myenv
+   30  cd myen
+   31  cd myenv
+   32  ls
+   33  activate
+   34  cd bin
+   35  ls
+   36  activate
+   37  /activate
+   38  activate
+   39  source activate
+   40  source deactivate
+   41  deactivate
+   42  sudo apt update
+   43  sudo apt upgrade
+   44  sudo apt upgrade -y
+   45  ls
+   46  vim file.txt
+   47  vimtutor
+   48  vim tutor
+   49  vim .vimrc
+   50  vimtutor
+   51  ls
+   52  rm TEST
+   53  rm vimrc
+   54  ls
+   55  rm file.txt
+   56  cd myenv
+   57  ls
+   58  cd bin
+   59  ls
+   60  source activate
+   61  sudo apt install numpy
+   62  pip install numpy
+   63  pip install pytorch
+   64  pip install torch
+   65  deactivate
+   66  ls blk
+   67  lsblk
+   68  /etc/fstab
+   69  sudo xed /etc/fstab
+   70  blkid
+   71  .vimrc
+   72  vim .vimrc
+   73  s
+   74  ls
+   75  vim .vimrc
+   76  cd .vim
+   77  ls
+   78  cd autoload
+   79  ls
+   80  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+   81  [200~     curl -fLo ~/.vim/autoload/plug.vim --create-dirs          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim~
+   82  curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+   83  ls
+   84  cd ..
+   85  vim .vimrc
+   86  sudo apt install pycodestyle
+   87  sudo apt install vulture
+   88  sudo apt install pylint
+   89  vim .vimrc
+   90  ~pylint --generate-rcfile > ~/.pylintrc~
+   91  pylint --generate-rcfile > .pylintrc
+   92  vim .pylintrc
+   93  vim .vimrc
+   94  ls
+   95  mkdir projects
+   96  ls
+   97  cd myenv
+   98  ls
+   99  cd bin
+  100  source activate
+  101  cd ..
+  102  ls
+  103  cd projects
+  104  mkdir Project_1
+  105  sudo apt intstall torch
+  106  sudo apt install torch
+  107  ls
+  108  cd Project_1
+  109  vim project_1.py
+  110  ls
+  111  python3 project_1.py
+  112  cd
+  113  ld
+  114  ls
+  115  cd myenv
+  116  ls
+  117  cd bin
+  118  ls
+  119  source activate
+  120  ls
+  121  pip install torch
+  122  ls
+  123  pip install scipy
+  124  pip install pandas
+  125  cd ..
+  126  ls
+  127  cd projects
+  128  ls
+  129  cd Project_1
+  130  ls
+  131  vim project_1.py
+  132  python3 project_1.py
+  133  ls
+  134  cd projects/Project_1
+  135  ls
+  136  sudo update-secureboot-policy --enroll-key
+  137  sudo apt install build-essential
+  138  vim
+  139  gcc helloworld.c
+  140  vim helloWorld.c
+  141  ls
+  142  vim helloworld.c
+  143  gcc helloworld.c
+  144  vim helloworld.c
+  145  gcc helloworld.c
+  146  gcc helloworld.c -o helloworld
+  147  ./helloworld
+  148  gcc helloworld.c -o helloworld
+  149  gcc helloworld.c -o helloworl
+  150  ./helloworl
+  151  gcc matMul.c -o dotProd
+  152  ./ dotProd
+  153  gcc matMul.c -o dotProd
+  154  ./ dotProd
+  155  dotProd
+  156  /dotProd
+  157  ./dorProd
+  158  ./dotProd
+  159  vim helloworld.c
+  160  ls
+  161  rm helloworld.c
+  162  ls
+  163  rm helloworld
+  164  rm helloworl
+  165  ls
+  166  rm a.out
+  167  vim matMul.c
+  168  ls
+  169  vim matMul.c
+  170  ls
+  171  ./dotprod
+  172  ./dotProd
+  173  ls
+  174  cd UMichStuff
+  175  ls
+  176  gcc helloWorld.c -o helloWolrd
+  177  ls
+  178  ./helloWolrd
+  179  ls
+  180  cd UMichStuff
+  181  ls
+  182  vim helloWorld.c
+  183  cd..
+  184  cd .
+  185  cd ..
+  186  ls
+  187  rm helloWorld.c
+  188  rm matMul.c
+  189  rm helloWorld
+  190  ls
+  191  cd UMich
+  192  cd UMichStuff\ls
+  193  cd UMichSuff
+  194  cd UMichStuff
+  195  ls
+  196  cd ~
+  197  which
+  198  which cd
+  199  sudo apt install gfortran
+  200  which gfortran
+  201  cd /etc
+  202  ls
+  203  les vimrc
+  204  less nanorc
+  205  more nanorc
+  206  cd
+  207  ls
+  208  man ls
+  209  man less
+  210  ls UMichStuff
+  211  cd UMichStuff
+  212  vim hello_word.f90
+  213  cat hello_world.f90
+  214  cat hello_word.f90
+  215  vim hello_word.f90
+  216  cd UMichStuff
+  217  ls
+  218  gfortran hello_word.f90
+  219  ls
+  220  ./a.out
+  221  ls
+  222  ./a.out
+  223  ls
+  224  mkdir linearAlgerba
+  225  ls
+  226  rm linearAlgerba
+  227  rmdir linearAlgerba
+  228  ls
+  229  mkdir linear_algebra
+  230  cd linear_algebra
+  231  ls
+  232  cd UMichStuff
+  233  ls
+  234  ./a.out
+  235  ./helloWorld.c
+  236  ./helloWorld
+  237  ./helloWolrd
+  238  cd ..
+  239  ls
+  240  cd linear_algenra
+  241  cd linear_algebra
+  242  ls
+  243  mkdir essentials
+  244  ls
+  245  cd essentials
+  246  ls
+  247  touch length.c
+  248  ls
+  249  vim length.c
+  250  ls
+  251  rm length.c
+  252  ls
+  253  touch vector.c
+  254  ls
+  255  cd ..
+  256  ls
+  257  cd UMichStuff
+  258  ls
+  259  echo "start of Lab01"
+  260  date
+  261  ps
+  262  top
+  263  who
+  264  id
+  265  groups
+  266  ssh
+  267  df -kh
+  268  du
+  269  du -sh
+  270  ls
+  271  cd ..
+  272  ls
+  273  cd UMichStuff
+  274  ls
+  275  cd ~
+  276  cd UMichStuff
+  277  ls
+  278  pwd
+  279  tree
+  280  sudo apt install tree
+  281  tree
+  282  ..
+  283  cd .
+  284  cd /usr/lib
+  285  ls
+  286  tree
+  287  ls
+  288  tree
+  289  s -l
+  290  ls -l
+  291  cd ..
+  292  cd UMichStuff
+  293  ls
+  294  cd ~
+  295  cd UMichStuff
+  296  touch me
+  297  ls
+  298  ls -l
+  299  chmod o+r me
+  300  ls -l
+  301  cd =
+  302  cd -
+  303  ls
+  304  cd UMichStuff
+  305  ls
+  306  mkdir NERS570
+  307  cd NERS570
+  308  ls
+  309  ls -l\
+  310  ls -l
+  311  ls -a
+  312  cd ~
+  313  ls -a
+  314  cd -
+  315  mkdir Lab01
+  316  ls
+  317  cd Lab01
+  318  cd ..
+  319  ls
+  320  touch test
+  321  ls
+  322  cd Lab01
+  323  tree
+  324  mv ../test .
+  325  ls
+  326  rm test
+  327  ls
+  328  cd ..
+  329  tre
+  330  tree
+  331  rmdir NERS570/Lab01
+  332  rmdir NERS570
+  333  ls
+  334  tree
+  335  mkdir -p NERS570/Lab01
+  336  ls
+  337  touch test
+  338  rm test
+  339  cp ~/.bashrc ./bashrc
+  340  ls
+  341  vim bashrc
+  342  ls
+  343  cat bashrc
+  344  cho %SHELL
+  345  echo $SHELL
+  346  cd
+  347  cp /etc/bashrc .bashrc^C
+  348  cd etc
+  349  ls
+  350  echo "I have some really long command"
+  351  ls
+  352  !
+  353  ls
+  354  echo "I have some really long command"
+  355  I have some really long
+  356  ~/UMichStuff/NERS570/Lab01$ cd
+  357  sleep 90
+  358  find /etc -type f -name *.conf
+  359  grep
+  360  man grep
+  361  grep -R *.conf /etc
+  362  which grep
+  363  cd UMichStuff
+  364  ls
+  365  rm me
+  366  cd NERS570
+  367  cd Lab01
+  368  date > timestamp.txt
+  369  ls
+  370  cat timestamp.txt
+  371  date >> timestamp.txt
+  372  ls
+  373  cat timestep.txt
+  374  cat timestamp.txt
+  375  ls
+  376  date | tee timestamp.txt
+  377  ls
+  378  cat timestamp.txt
+  379  ls
+  380  echo "nochanges" | sed  "s/no/some/"
+  381  find /etc -type f -name *.conf
+  382  find /etc -type f -name *.conf 2> /dev/null
+  383  find /etc -type f -name *.conf | grep denied >&2 | wc -1
+  384  ls *.c || echo "yay"
+  385  echo "count to $(seq 10)"
+  386  printenv
+  387  print env | less
+  388  printenv | less
+  389  grep path
+  390  export PATH=PATH$HOME
+  391  .out
+  392  a.out
+  393  exort PATH = $ORIG_PATH
+  394  export PATH = $ORIG_PATH
+  395  which mpicc
+  396  module avai
+  397  module avail
+  398  modules avail
+  399  fg
+  400  firefo
+  401  firefox
+  402  sudo apt install module
+  403  unset PATH
+  404  ls
+  405  modules avail
+  406  sudo apt install module
+  407  module load openmpi
+  408  export PATH
+  409  ls
+  410  history
+  411  history > mylab1.txt
