@@ -79,6 +79,16 @@ int main(int argc, char *argv[]) {
     //for(int i=0; i<nz; i++){
     //    fprintf(stdout, "%d %d %20.19g\n", I[i]+1, J[i]+1, val[i]);
     //}
+    //make a random vector of size M to perform the matrix multiplication
+    double vec[M];
+    double result[M];
+    for(int i = 0; i < M; i++){
+        int numer = rand() % 10000;
+        int denom = rand() % 10000;
+        vec[i] = numer/denom;
+        result[i] = 0;
+    }
+
 
     if (strcmp(spfmat, "DEN") == 0){
         //init A matriz and fill with zeros
@@ -94,9 +104,28 @@ int main(int argc, char *argv[]) {
             A[I[i]][J[i]] = val[i];
         }
         
-        
+        for(int i=0; i<M; i++){
+            for(int j=0; j<N; j++){
+                result[i] += A[i][j]*vec[j]; 
+            }
+        }
+
+        for(int i=0; i < M; i++){
+            printf("%f \n", result[i]);
+        }
+
     }else if (strcmp(spfmat, "COO") == 0){
         //mats read in in coo
+        for(int i = 0; i < nz; i++){
+            result[I[i]] += val[i]*vec[J[i]];
+        }
+
+        for(int i=0; i < M; i++){
+            printf("%f \n", result[i]);
+        }
+
+
+
     }else if (strcmp(spfmat, "CSR") == 0){
        //init arrays 
        int row_count[M]; 
@@ -119,6 +148,10 @@ int main(int argc, char *argv[]) {
            }else{
                row_ptr[i] = row_ptr[i-1] + row_count[i-1];
            }
+       }
+
+       for(int i = 0; i < nz; i++){
+           printf("%d, %d \n", I[i], J[i]);
        }
        
     }else if (strcmp(spfmat, "ELL") == 0){
