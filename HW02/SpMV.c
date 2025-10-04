@@ -73,12 +73,7 @@ int main(int argc, char *argv[]) {
 
     char* spfmat = argv[1];
     int nmults = atoi(argv[2]);
-<<<<<<< HEAD
     
-=======
-    char* mmfile = argv[3];
-
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
    
     //make a random vector of size M to perform the matrix multiplication
     double vec[M];
@@ -104,11 +99,7 @@ int main(int argc, char *argv[]) {
         for(int i = 0; i < nz; i++){
             A[I[i]][J[i]] = val[i];
         }
-<<<<<<< HEAD
         clock_t start = clock();
-=======
-        
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
 		for(int k=0; k<nmults; k++){ 
         	for(int i=0; i<M; i++){
             	for(int j=0; j<N; j++){
@@ -119,11 +110,8 @@ int main(int argc, char *argv[]) {
 				vec[i] = result[i];
 			}
 		}
-<<<<<<< HEAD
         clock_t end = clock();
         double time_spent = (double)(end-start)/CLOCKS_PER_SEC;
-=======
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
         for(int i=0; i < M; i++){
             printf("%f \n", result[i]);
         }
@@ -131,11 +119,7 @@ int main(int argc, char *argv[]) {
 
     }else if (strcmp(spfmat, "COO") == 0){
         //mats read in in coo
-<<<<<<< HEAD
         clock_t start = clock();
-=======
-
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
 		for(int j = 0; j < nmults; j++){
         	for(int i = 0; i < nz; i++){
             	result[I[i]] += val[i]*vec[J[i]];	
@@ -144,7 +128,6 @@ int main(int argc, char *argv[]) {
 				vec[i] = result[i];
 			}	
 		}
-<<<<<<< HEAD
         clock_t end = clock();
         double time_spent = (double)(end-start)/CLOCKS_PER_SEC;
         for(int i=0; i < M; i++){
@@ -152,13 +135,6 @@ int main(int argc, char *argv[]) {
         }
         printf("time spent: %f \n", time_spent);
 
-=======
-        for(int i=0; i < M; i++){
-            printf("%f \n", result[i]);
-        }
-
- 
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
     }else if (strcmp(spfmat, "CSR") == 0){
        //init arrays 
 	   int col_idx[nz];
@@ -199,10 +175,7 @@ int main(int argc, char *argv[]) {
            }
        }
 		//do matvec
-<<<<<<< HEAD
         clock_t start = clock();
-=======
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
 		for(int k =0; k < nmults; k++){
 	   		int val_index = 0;
 	   		for(int i = 0; i < M+1; i++){
@@ -216,20 +189,14 @@ int main(int argc, char *argv[]) {
 				vec[i] = result[i];
 			}
 		}
-<<<<<<< HEAD
         clock_t end = clock();
         double time_spent = (double)(end-start)/CLOCKS_PER_SEC;
-=======
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
 		//print result
 		for(int i = 0; i < M; i++){
 	 	    printf("%f", result[i]);
 			printf("\n");
 		}
-<<<<<<< HEAD
         printf("time spent: %f \n", time_spent);
-=======
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
              
     }else if (strcmp(spfmat, "ELL") == 0){
         //count num non zero observations in each row
@@ -279,10 +246,7 @@ int main(int argc, char *argv[]) {
             }
         }
 		//do matvec
-<<<<<<< HEAD
         clock_t start = clock();
-=======
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
 		for(int k = 0; k<nmults; k++){
 			for(int i = 0; i < M*max; i++){
 				int temp_col = flat_col[i];
@@ -296,20 +260,14 @@ int main(int argc, char *argv[]) {
 				vec[i] = result[i];
 			}
 		}         
-<<<<<<< HEAD
         clock_t end = clock();
         double time_spent = (double)(end-start)/CLOCKS_PER_SEC;
-=======
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
 		//print result
         for(int i = 0; i < M; i++){
    			printf("%f", result[i]);
 			printf("\n");
 		}
-<<<<<<< HEAD
         printf("time spent: %f \n", time_spent);
-=======
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
     }else if (strcmp(spfmat, "JDS") == 0){
         //init structure to keep track of row ind and sort by num nonzero obs
         int row_count[M];
@@ -320,7 +278,6 @@ int main(int argc, char *argv[]) {
             row_count[i] = 0;
         }
         
-        for(int i = 0; i < nz; i++){
         for(int i = 0; i < nz; i++){
             row_count[I[i]] += 1;
         }
@@ -364,7 +321,6 @@ int main(int argc, char *argv[]) {
 
         //load data
         for(int i = 0; i < nz; i++){
-<<<<<<< HEAD
             int row_num;
             for(int j = 0; j<M; j++){
                 if(new_rows_ind[j] == I[i]){
@@ -372,9 +328,6 @@ int main(int argc, char *argv[]) {
                     break;
                 }
             }            
-=======
-            int row_num = find_index(new_rows_ind, M, I[i]);            
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
             jagged_cols[row_num][row_count[row_num]] = J[i];
             jagged_vals[row_num][row_count[row_num]] = val[i];
             row_count[row_num] ++;
@@ -405,20 +358,16 @@ int main(int argc, char *argv[]) {
 		//flatten array	
 		int flattened_col[nz];
 		double flattened_val[nz];
-<<<<<<< HEAD
         for(int i = 0; i < nz; i++){
             flattened_col[i] = 0;
             flattened_val[i] = 0;
         }
-=======
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
 		int flat_idx = 0;
 		for(int i = 0; i < row_ind[0].count; i++){
 			for(int j = 0; j < col_count[i]; j++){
 				flattened_col[flat_idx] = jagged_cols[j][i];
 				flattened_val[flat_idx] = jagged_vals[j][i];
 				flat_idx ++;
-<<<<<<< HEAD
                 
 			}
 		}
@@ -439,17 +388,6 @@ int main(int argc, char *argv[]) {
                 temp_two = iter[i];
                 matvec_ind = temp_one - temp_two;
 				for(int j = 0; j < matvec_ind; j++){
-=======
-			}
-		}
-
-		for(int k = 0; k<nmults; k++){
-			int col_val_idx = 0;
-			int vec_idx=0;
-			int result_idx=0;
-			for(int i = 0; i < row_ind[0].count+1; i++){
-				for(int j = 0; j < iter[i+1]-iter[i]; j++){
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
 					vec_idx = flattened_col[col_val_idx];
 					result_idx = row_ind[j].ind;
 					result[result_idx] += flattened_val[col_val_idx]*vec[vec_idx];
@@ -460,7 +398,6 @@ int main(int argc, char *argv[]) {
 				vec[i] = result[i];
 			}
 		}
-<<<<<<< HEAD
         clock_t end = clock();
         double time_spent = (double)(end-start)/CLOCKS_PER_SEC;
 		for(int i = 0; i < M; i++){
@@ -472,17 +409,6 @@ int main(int argc, char *argv[]) {
 			free(jagged_cols[i]);
 		}
     }else{
-=======
-		for(int i = 0; i < M; i++){
-			printf("%f \n", result[i]);
-		}
-
-		//for(int i = 0; i < M; i++){
-		//	free(jagged_vals[i]);
-		//	free(jagged_cols[i]);
-		//}
-   } }else{
->>>>>>> 1624ccb2db97135f96606cbb5562081693e6ffb0
        printf("the provided format is unrecogenized must be one of: Dense (DEN),coordinate formate (COO),compressed sparse row (CSR), ELLPack (ELL) or jagged diagonal storage (JDS)\n");
        return 3;
     }
